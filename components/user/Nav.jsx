@@ -1,11 +1,12 @@
 import Link from "next/link";
+import UserByid from "./UserById";
 const Nav = () => {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
-            Navbar
+            Nav
           </a>
           <button
             className="navbar-toggler"
@@ -30,7 +31,7 @@ const Nav = () => {
               <li className="nav-item">
                 <Link href="/eventstate">
                   <a className="nav-link" href="#">
-                    EventState
+                    colection
                   </a>
                 </Link>
               </li>
@@ -43,17 +44,17 @@ const Nav = () => {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Mahasiswa
+                  genre
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
                     <Link href="/user/mahasiswa">
-                      <a className="dropdown-item">Akademik</a>
+                      <a className="dropdown-item">sedih</a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/user/kemahasiswaan">
-                      <a className="dropdown-item">Kemahasiswaan</a>
+                      <a className="dropdown-item">senang</a>
                     </Link>
                   </li>
                   <li>
@@ -70,17 +71,7 @@ const Nav = () => {
                 <a className="nav-link disabled">Disabled</a>
               </li>
             </ul>
-            <form className="d-flex">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button className="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
+         <UserByid/>
           </div>
         </div>
       </nav>

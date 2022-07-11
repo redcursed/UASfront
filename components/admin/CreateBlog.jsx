@@ -1,9 +1,9 @@
 import { useState } from "react";
 import axios from "axios";
 
-const CreateMahasiswa = () => {
+const CreateBlog = () => {
   const [id, setId] = useState("");
-  const [author, setAuthor] = useState("");
+
   const [date, setDate] = useState("");
   const [tag, setTag] = useState("");
 
@@ -11,9 +11,9 @@ const CreateMahasiswa = () => {
     e.preventDefault();
     try {
       axios
-        .post("http://localhost:5000/blogs", {
+        .post("http://localhost:5000/blog", {
           id,
-          author,
+
           date,
           tag,
         })
@@ -28,7 +28,7 @@ const CreateMahasiswa = () => {
   }
   const clearInput = () => {
     setId("");
-    setAuthor("");
+
     setDate("");
     setTag("");
   };
@@ -54,18 +54,6 @@ const CreateMahasiswa = () => {
             <div className="form-floating">
               <input
                 className="form-control mb-2"
-                id="author"
-                type="text"
-                placeholder="author"
-                value={author}
-                onChange={(e) => setAthor(e.target.value)}
-              />
-              <label htmlFor="author">Author</label>
-            </div>
-
-            <div className="form-floating">
-              <input
-                className="form-control mb-2"
                 id="date"
                 type="text"
                 placeholder="date"
@@ -81,7 +69,7 @@ const CreateMahasiswa = () => {
                 id="tag"
                 type="text"
                 placeholder="tag"
-                value={prodi}
+                value={tag}
                 onChange={(e) => setTag(e.target.value)}
               />
               <label htmlFor="tag">Tag</label>

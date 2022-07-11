@@ -1,10 +1,10 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
 
-const BlogsByid = () => {
-  const [id, setid] = useState("");
+const BlogByid = () => {
+  const [id, setId] = useState("");
   const router = useRouter();
-  const getBlgByid = (e) => {
+  const getBlgById = (e) => {
     e.preventDefault();
     router.push({
       pathname: "datablog",
@@ -13,16 +13,16 @@ const BlogsByid = () => {
   };
   return (
     <div className="container">
-      <form onSubmit={getBlgByid}>
+      <form onSubmit={getBlgById}>
         <div className="row">
           <div className="col-8"></div>
           <div className="col d-flex flex-reverse">
             <input
               type="text"
               className="form-control"
-              placeholder="Cari Mahasiswa By Nim"
+              placeholder="Cari Blog By Id"
               value={id}
-              onChange={(e) => setid(e.target.value)}
+              onChange={(e) => setId(e.target.value)}
             />
 
             <input
@@ -37,4 +37,4 @@ const BlogsByid = () => {
   );
 };
 
-export default BlogsByid;
+export default BlogByid;
